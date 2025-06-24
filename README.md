@@ -1,6 +1,6 @@
 # Stride Intent Matcher
 
-An experimental intent-based matching engine for Stride Swap, a cross-chain DEX enabling peer-to-peer swaps without AMM slippage.
+An experimental intent-based matching engine for a cross-chain DEX enabling peer-to-peer swaps without AMM slippage.
 
 ## 🎯 Core Concept
 
