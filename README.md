@@ -1,4 +1,4 @@
-# Stride Intent Matcher
+# Intent Matcher
 
 An experimental intent-based matching engine for a cross-chain DEX enabling peer-to-peer swaps without AMM slippage.
 
@@ -21,7 +21,7 @@ Instead of immediately executing swaps through AMMs, users submit "intents" that
 
 ### Key Components
 
-**StrideIntentMatcher.sol** - Core matching contract
+**IntentMatcher.sol** - Core matching contract
 - Intent storage and management
 - Cross-chain compatibility validation
 - P2P matching logic with partial fills
@@ -44,7 +44,7 @@ Instead of immediately executing swaps through AMMs, users submit "intents" that
 ```bash
 # Clone and setup
 git clone <repo>
-cd stride-intent-matcher
+cd p2p-intent-matching-engine
 
 # Install dependencies
 make install
@@ -79,9 +79,9 @@ bytes32 intentId = matcher.submitIntent(
 ### Running the Relayer
 
 ```typescript
-import { StrideIntentRelayer } from './relayer';
+import { IntentRelayer } from './relayer';
 
-const relayer = new StrideIntentRelayer(
+const relayer = new IntentRelayer(
     'https://your-rpc-url',
     'your-deployed-contract-address', 
     'your-private-key'
@@ -89,20 +89,6 @@ const relayer = new StrideIntentRelayer(
 
 await relayer.start();
 ```
-
-## ⚡ Benefits
-
-### For Users
-- **Zero Slippage** on matched trades
-- **Lower Gas Costs** (one P2P transfer vs two AMM swaps)
-- **MEV Protection** (no front-running during matching window)
-- **Cross-Chain Efficiency** (direct settlement vs bridge + swap)
-
-### For Stride Swap
-- **Institutional Appeal** (sophisticated trading infrastructure)
-- **Better Capital Efficiency** (less AMM liquidity needed)
-- **Network Effects** (more intents = better matching rates)
-- **Competitive Moat** (advanced matching vs basic bridging)
 
 ## 🧪 Test Results
 
