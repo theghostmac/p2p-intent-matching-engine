@@ -23,7 +23,7 @@ remappings = [
 # Profile for testing
 [profile.test]
 verbosity = 2
-gas_reports = ["StrideIntentMatcher", "StrideSwapRouter"]
+gas_reports = ["IntentMatcher", "SwapRouter"]
 
 # Profile for CI
 [profile.ci]

@@ -32,7 +32,7 @@ clean:
 # Deploy to local anvil (make sure anvil is running)
 deploy-local:
 	@echo "Deploying to local anvil..."
-	forge script script/deploy/DeployStrideIntentMatcher.s.sol:DeployStrideIntentMatcher \
+	forge script script/deploy/DeployIntentMatcher.s.sol:DeployIntentMatcher \
 		--rpc-url http://localhost:8545 \
 		--private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 \
 		--broadcast
@@ -40,7 +40,7 @@ deploy-local:
 # Deploy to Sepolia testnet
 deploy-sepolia:
 	@echo "Deploying to Sepolia..."
-	forge script script/deploy/DeployStrideIntentMatcher.s.sol:DeployStrideIntentMatcher \
+	forge script script/deploy/DeployIntentMatcher.s.sol:DeployIntentMatcher \
 		--rpc-url sepolia \
 		--broadcast \
 		--verify

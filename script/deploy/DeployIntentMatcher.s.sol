@@ -2,7 +2,7 @@
 pragma solidity ^0.8.26;
 
 import "forge-std/Script.sol";
-import "../../src/StrideIntentMatcher.sol";
+import "../../src/IntentMatcher.sol";
 
 contract DeployStrideIntentMatcher is Script {
     function run() external {
@@ -19,7 +19,7 @@ contract DeployStrideIntentMatcher is Script {
 
         vm.startBroadcast(deployerPrivateKey);
 
-        StrideIntentMatcher matcher = new StrideIntentMatcher(swapRouter, owner);
+        IntentMatcher matcher = new StrideIntentMatcher(swapRouter, owner);
 
         vm.stopBroadcast();
 

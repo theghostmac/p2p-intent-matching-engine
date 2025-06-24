@@ -3,7 +3,7 @@ pragma solidity ^0.8.26;
 
 import "forge-std/Test.sol";
 import "forge-std/console.sol";
-import "../src/StrideIntentMatcher.sol";
+import "../src/IntentMatcher.sol";
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {ISwapRouter} from "../lib/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 
@@ -62,7 +62,7 @@ contract MockSwapRouter is ISwapRouter {
 }
 
 contract StrideIntentMatcherTest is Test {
-    StrideIntentMatcher public matcher;
+    IntentMatcher public matcher;
     MockSwapRouter public swapRouter;
     MockERC20 public tokenA;
     MockERC20 public tokenB;

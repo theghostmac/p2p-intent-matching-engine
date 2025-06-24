@@ -9,11 +9,11 @@ import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 /**
- * @title StrideIntentMatcher
+ * @title IntentMatcher.sol
  * @dev Intent-based matching engine for Stride Swap cross-chain DEX
- * @author Stride Team
+ * @author GhostMac
  */
-contract StrideIntentMatcher is ReentrancyGuard, Ownable {
+contract IntentMatcher is ReentrancyGuard, Ownable {
     using SafeERC20 for IERC20;
     using Math for uint256;
 
